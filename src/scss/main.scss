@@ -18,12 +18,181 @@ $maxWidthContainer: 1200; // Для масштабирования, наприм
 
 // Основная часть
 html {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  color: $text-color;
 }
 
 body {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -196px;
+    right: -26px;
+    width: 1162px;
+    height: 1504px;
+    z-index: -10;
+    background: url("../images/global/main-bg.jpg") center/contain no-repeat;
+  }
 }
 
 .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
+.page {
+  &__header {
+    margin-bottom: 160px;
+  }
+}
+
+.header {
+  &__inner {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 30px 130px 0;
+  }
+  &__logo-wrapper {
+  }
+  &__logo-img {
+  }
+}
+
+.buy {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__main {
+    flex: 1 0 540px;
+  }
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__accent-text {
+    font-size: 20px;
+    line-height: 23px;
+    color: #fff;
+    background: $accent-color;
+    border-radius: 60px;
+    padding: 15px 0;
+    text-align: center;
+    max-width: 425px;
+    margin-bottom: 50px;
+    transition: background-color 0.2s;
+    &:hover {
+      background-color: lighten($accent-color, 10%);
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  &__input {
+    max-width: 540px;
+    width: 100%;
+    border: 2px solid #0c1f36;
+    border-radius: 60px;
+    padding: 23px;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    color: $text-color;
+    transition: border-radius 0.15s;
+    appearance: none;
+    outline: none;
+    &::placeholder {
+      font-size: 20px;
+      line-height: calc(23 / 20);
+      color: $text-color;
+    }
+  }
+  &__input + &__input {
+    margin-top: 20px;
+  }
+  &__text-input {
+    margin-bottom: 20px;
+    filter: opacity(50%);
+    transition: filter 0.15s;
+    &:focus {
+      filter: opacity(100%);
+    }
+  }
+  &__select-wrapper {
+    max-width: 540px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 35px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 9px;
+      background: url("../images/buy/arrow.svg") center/contain no-repeat;
+    }
+  }
+  &__select {
+    cursor: pointer;  
+  }
+  &__btn {
+    margin-top: 30px;
+    max-width: 540px;
+    width: 100%;
+    background: #6589fe;
+    box-shadow: 0px 30px 40px rgba(78, 150, 255, 0.25);
+    border-radius: 60px;
+    border: none;
+    outline: none;
+    padding: 26px 162px 23px 204px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    color: #fff;
+    cursor: pointer;
+    transition: background .15s;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 162px;
+      transform: translateY(-50%);
+      width: 27px;
+      height: 27px;
+      background: url('../images/buy/cart.png') center/contain no-repeat;
+    }
+    &:hover {
+      background: darken(#6589fe, 10%);
+    }
+  }
+  &__paying {
+    max-width: 540px;
+    text-align: center;
+  }
+  &__paying-inner {
+  }
+  &__info {
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 12px; /* ширина scrollbar */
+}
+*::-webkit-scrollbar-track {
+  background: #daf3ff; /* цвет дорожки */
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #cacaca; /* цвет плашки */
+  &:active {
+    background-color: #b4b4b4;
+  }
+}
 @import "media";

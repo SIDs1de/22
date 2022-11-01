@@ -92,25 +92,18 @@ function build() {
   ).pipe(dest('public'));
 }
 
-// function html() {
-//   return (
-//     src('src/html/main.*')
-//       .pipe(fileInclude())
-//       // удалить строчку index.html
-//       // и расскоментить index.php
-//       // .pipe(concat('index.php'))
-//       .pipe(concat('index.html'))
-//       .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
-//       .pipe(dest('src'))
-//       .pipe(browserSync.stream())
-//   );
-// }
+function html() {
+  return (
+    src('src/**/*.html')
+      .pipe(browserSync.stream())
+  );
+}
 
 function watching() {
   watch(['src/scss/**/*.scss'], styles);
   watch(['src/images/**/*'], images);
   watch(['src/js/**/*.js', '!src/js/main.min.js'], scripts);
-  // watch(['src/**/*.{html,php}', '!src/index.{html,php}'], html);
+  watch(['src/**/*.{html,php}'], html);
 }
 
 exports.styles = styles;
@@ -122,7 +115,7 @@ exports.cleanPublic = cleanPublic;
 
 exports.build = series(cleanPublic, build);
 exports.default = parallel(
-  // html,
+  html,
   images,
   styles,
   scripts,

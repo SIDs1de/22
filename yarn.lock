@@ -4803,6 +4803,11 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+nativejs-select@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/nativejs-select/-/nativejs-select-1.0.7.tgz#f40b117190a5c6fb27b6bdf0c919cf5ca329fe60"
+  integrity sha512-Iw6avtPDl3D4MyOhn1pKePKveBVsK5JbvqScCUwPpRJ82K8gCa5rdHIuctD2eve8vs03xWph9UzqmTCy08Q4iw==
+
 negotiator@0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"

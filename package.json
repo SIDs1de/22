@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "gulp-sourcemaps": "^3.0.0",
+    "nativejs-select": "^1.0.7",
     "normalize.css": "^8.0.1"
   }
 }
