@@ -41,16 +41,144 @@
 
 
   <!-- STYLES -->
+  <link href="css/nativejs-select.css" rel="stylesheet">
   <link href="css/main.min.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="page">
 
-  
+  <!-- HEADER -->
+  <header class="header page__header">
+    <!-- HEADER__INNER -->
+    <div class="header__inner">
+      <div class="header__logo-wrapper">
+        <picture>
+          <source srcset="images/header/logo.webp" type="image/webp">
+          <img class="header__logo-img" src="images/header/logo.jpg" alt="Логотип BotGorilla">
+        </picture>
+      </div>
+    </div>
+    <!-- / HEADER__INNER -->
+  </header>
+  <!-- / HEADER -->
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- BUY -->
+    <section class="buy">
+      <div class="container">
+        <!-- BUY__INNER -->
+        <div class="buy__inner">
+          <div class="buy__main">
+            <h1 class="buy__title main-title">
+              ПОКУПКА ДОНАТА
+            </h1>
+            <p class="buy__accent-text">
+              При покупке доната КОМИССИИ НЕТ!
+            </p>
+            <form class="buy__form" action="#">
+              <input class="buy__input buy__text-input" type="text" name="id" placeholder="Ваш игровой ID у бота"
+                required>
+              <div class="buy__select-wrapper">
+                <select class="buy__input buy__select" id="selid" name="selid" required>
+                  <option disabled selected>
+                    Выберите товар для покупки
+                  </option>
+                  <optgroup label="Привилегии (навсегда)">
+                    <option value="31">
+                      УЛЬТРА статус — 1790 P.
+                    </option>
+                    <option value="12">
+                      АДМИНИСТРАТОР — 1500 P.
+                    </option>
+                    <option value="20">
+                      ПРЕМИУМ статус — 799 P.
+                    </option>
+                    <option value="18">
+                      VIP статус — 299 P.
+                    </option>
+                  </optgroup>
+                  <optgroup label="Лучший игровой бизнес">
+                    <option value="21">
+                      Адронный коллайдер — 1990 P.
+                    </option>
+                    <option value="11">
+                      Колонизация Марса — 500 P.
+                    </option>
+                  </optgroup>
+                  <optgroup label="Игровой денежный принтер">
+                    <option value="23">
+                      HP Color LaserJet — 399 P.
+                    </option>
+                  </optgroup>
+                  <optgroup label="Игровая валюта">
+                    <option value="22">
+                      30.000.000.000.000$ — 199 P.
+                    </option>
+                    <option value="34">
+                      15.000 GB — 15 P.
+                    </option>
+                    <option value="35">
+                      50.000 GB — 48 P.
+                    </option>
+                    <option value="36">
+                      100.000 GB — 95 P.
+                    </option>
+                    <option value="37">
+                      250.000 GB — 235 P.
+                    </option>
+                    <option value="38">
+                      500.000 GB — 460 P.
+                    </option>
+                    <option value="39">
+                      1.000.000 GB — 900 P.
+                    </option>
+                    <option value="40">
+                      2.500.000 GB — 2250 P.
+                    </option>
+                  </optgroup>
+                  <optgroup label="Товары из лавки">
+                    <!-- <option value="32">
+                          Безлимитные переводы — 10000 P.
+                      </option> -->
+                    <option value="41">
+                      Безлимитный банк. счет — 5000 P.
+                    </option>
+                    <option value="33">
+                      Максимальная энергия 200 — 1500 P.
+                    </option>
+                  </optgroup>
+                  <optgroup label="Разбан аккаунта">
+                    <option value="24">
+                      Снять временный бан — 500 P.
+                    </option>
+                  </optgroup>
+                </select>
+              </div>
+              <button class="buy__btn" type="submit">Перейти к оплате</button>
+            </form>
+            <div class="buy__paying">
+              <picture>
+                <source srcset="images/buy/buy-cards.webp" type="image/webp">
+                <img class="buy__paying-inner" src="images/buy/buy-cards.png" alt="Оплатить">
+              </picture>
+            </div>
+          </div>
+          <div class="buy__info">
+
+          </div>
+        </div>
+        <!-- / BUY__INNER -->
+      </div>
+    </section>
+    <!-- / BUY -->
+  </main>
+  <!-- / MAIN -->
 
   <!-- Подключение скриптов -->
   <script src="js/modernizr-custom.js"></script>
+  <script src="js/nativejs-select.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
