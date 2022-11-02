@@ -1,1 +1,33 @@
 // Здесь находятся все медиазапросы, вынесены в отдельный файл для удобства
+@media (max-width: 670px) {
+  .header {
+    &__inner {
+      padding: 20px 20px 0 20px;
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .panel {
+    top: 43%;
+    &__main {
+      @include adaptive-value("width", 440, 310, 1);
+      padding-top: 30px;
+      padding-bottom: 30px;
+      @include adaptive-value("padding-left", 85, 40, 1);
+      @include adaptive-value("padding-right", 85, 40, 1);
+    }
+    &__bottom {
+      padding: 15px 60px;
+    }
+    &__link {
+      padding-left: 0;
+      padding-right: 0;
+      @include adaptive-value("max-width", 540, 300, 1);
+      &::before {
+        @include adaptive-value("left", 120, 35, 1);
+        // left: 70px;
+      }
+    }
+  }
+}
