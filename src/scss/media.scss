@@ -8,6 +8,14 @@
 }
 
 @media (max-width: 570px) {
+  body {
+    &::before {
+      top: 10px;
+      right: -100px;
+      width: calc(1162px / 1.5);
+      height: calc(1504px / 1.5);
+    }
+  }
   .panel {
     top: 43%;
     &__main {
@@ -16,17 +24,17 @@
       padding-bottom: 30px;
       @include adaptive-value("padding-left", 85, 40, 1);
       @include adaptive-value("padding-right", 85, 40, 1);
+      height: 245px;
     }
     &__bottom {
       padding: 15px 60px;
     }
     &__link {
-      padding-left: 0;
+      padding-left: 10px;
       padding-right: 0;
       @include adaptive-value("max-width", 540, 300, 1);
       &::before {
-        @include adaptive-value("left", 120, 35, 1);
-        // left: 70px;
+        @include adaptive-value("left", 120, 40, 1);
       }
     }
   }
