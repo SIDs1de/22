@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // window.addEventListener('resize', vkSwitchWidth);
+  window.addEventListener('resize', vkSwitchWidth);
   vkSwitchWidth();
   selectSwitch();
 });
