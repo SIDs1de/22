@@ -95,6 +95,52 @@
   }
 }
 
+@media (max-width: 425px) {
+  .container {
+    padding: 0 10px;
+  }
+  .main-title {
+    font-size: 34px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 7px;
+  }
+  .buy {
+    &__main {
+      margin-bottom: 36px;
+    }
+    &__accent-text {
+      font-size: 14px;
+      padding-left: 14px;
+      padding-right: 14px;
+      margin-bottom: 20px;
+    }
+    &__input {
+      font-size: 15px;
+    }
+    &__btn {
+      font-size: 15px;
+    }
+    &__info-btn {
+      font-size: 13px;
+      width: 160px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    &__info-btn-wrapper {
+      width: 160px;
+      margin: 8px;
+    }
+    &__info-btns-list {
+      margin: -8px;
+      margin-bottom: 17px;
+    }
+    &__company-wrapper {
+      font-size: 14px;
+    }
+  }
+}
+
 @media (max-width: 410px) {
   .buy {
     &__info-btn-wrapper {
@@ -114,6 +160,15 @@
     }
     &__select {
       padding-right: 33px;
+    }
+  }
+}
+
+@media (max-width: 359px) {
+  .buy {
+    &__info-btns-list {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
     }
   }
 }
