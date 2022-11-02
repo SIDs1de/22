@@ -69,9 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
     select.addEventListener('blur', () => {
       selectWrapper.classList.remove('_open');
     });
+    select.addEventListener('changed', () => {
+      selectWrapper.classList.remove('_open');
+    });
   };
 
-  window.addEventListener('resize', vkSwitchWidth);
   vkSwitchWidth();
   selectSwitch();
 });

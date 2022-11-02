@@ -33,7 +33,7 @@
 @media (max-width: 600px) {
   .buy {
     &__info-btn-wrapper {
-      width: 185px;
+      width: 170px;
     }
   }
 }
@@ -95,7 +95,7 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 410px) {
   .buy {
     &__info-btn-wrapper {
       width: 100%;
@@ -111,6 +111,9 @@
         height: calc(9px / 1.5);
         right: 20px;
       }
+    }
+    &__select {
+      padding-right: 33px;
     }
   }
 }
