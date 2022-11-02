@@ -44,6 +44,9 @@
   <link href="css/nativejs-select.css" rel="stylesheet">
   <link href="css/main.min.css" rel="stylesheet">
 
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+
 </head>
 
 <body class="page">
@@ -55,7 +58,7 @@
       <div class="header__logo-wrapper">
         <picture>
           <source srcset="images/header/logo.webp" type="image/webp">
-          <img class="header__logo-img" src="images/header/logo.jpg" alt="Логотип BotGorilla">
+          <img class="header__logo-img" src="images/header/logo.png" alt="Логотип BotGorilla">
         </picture>
       </div>
     </div>
@@ -70,6 +73,7 @@
       <div class="container">
         <!-- BUY__INNER -->
         <div class="buy__inner">
+          <!-- BUY__MAIN -->
           <div class="buy__main">
             <h1 class="buy__title main-title">
               ПОКУПКА ДОНАТА
@@ -77,6 +81,7 @@
             <p class="buy__accent-text">
               При покупке доната КОМИССИИ НЕТ!
             </p>
+            <!-- BUY__FORM -->
             <form class="buy__form" action="#">
               <input class="buy__input buy__text-input" type="text" name="id" placeholder="Ваш игровой ID у бота"
                 required>
@@ -158,6 +163,7 @@
               </div>
               <button class="buy__btn" type="submit">Перейти к оплате</button>
             </form>
+            <!-- / BUY__FORM -->
             <div class="buy__paying">
               <picture>
                 <source srcset="images/buy/buy-cards.webp" type="image/webp">
@@ -165,9 +171,40 @@
               </picture>
             </div>
           </div>
+          <!-- / BUY__MAIN -->
+          <!-- BUY__INFO -->
           <div class="buy__info">
+            <div class="buy__vk-groups vk-groups" id="vk_groups"></div>
+            <!-- BUY__INFO-BTNS-LIST -->
+            <ul class="buy__info-btns-list">
+              <li class="buy__info-btn-wrapper">
+                <a class="buy__info-btn" href="#">Соглашение</a>
+              </li>
+              <li class="buy__info-btn-wrapper">
+                <a class="buy__info-btn" href="#">Конфиденциальность</a>
+              </li>
+              <li class="buy__info-btn-wrapper">
+                <a class="buy__info-btn buy__info-btn--trasparent" href="#">Описание товаров</a>
+              </li>
+              <li class="buy__info-btn-wrapper">
+                <a class="buy__info-btn buy__info-btn--trasparent" href="#">Контакты</a>
+              </li>
+            </ul>
+            <!-- / BUY__INFO-BTNS-LIST -->
 
+            <div class="buy__company-wrapper">
+              <p class="buy__company-text">
+                ИП Чернышев Егор Алексеевич
+              </p>
+              <p class="buy__company-text">
+                ИНН 165036599758
+              </p>
+              <p class="buy__company-text">
+                ОГРН 321169000123641
+              </p>
+            </div>
           </div>
+          <!-- / BUY__INFO -->
         </div>
         <!-- / BUY__INNER -->
       </div>

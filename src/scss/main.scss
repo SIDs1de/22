@@ -139,13 +139,14 @@ body {
     }
   }
   &__select {
-    cursor: pointer;  
+    cursor: pointer;
+    background: transparent;
   }
   &__btn {
     margin-top: 30px;
     max-width: 540px;
     width: 100%;
-    background: #6589fe;
+    background: #4e96ff;
     box-shadow: 0px 30px 40px rgba(78, 150, 255, 0.25);
     border-radius: 60px;
     border: none;
@@ -157,20 +158,20 @@ body {
     line-height: calc(23 / 20);
     color: #fff;
     cursor: pointer;
-    transition: background .15s;
+    transition: background 0.15s;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 162px;
       transform: translateY(-50%);
       width: 27px;
       height: 27px;
-      background: url('../images/buy/cart.png') center/contain no-repeat;
+      background: url("../images/buy/cart.png") center/contain no-repeat;
     }
     &:hover {
-      background: darken(#6589fe, 10%);
+      background: darken(#4e96ff, 10%);
     }
   }
   &__paying {
@@ -180,6 +181,67 @@ body {
   &__paying-inner {
   }
   &__info {
+    max-width: 541px;
+    width: 100%;
+  }
+  &__vk-groups {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px rgba(#000, 0.2);
+    margin-bottom: 26px;
+  }
+  &__info-btns-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+    margin-bottom: 40px;
+  }
+  &__info-btn-wrapper {
+    margin: 10px;
+    width: 260px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__info-btn {
+    font-size: 17px;
+    line-height: 20px;
+    color: #fff;
+    background-color: $text-color;
+    box-shadow: 0px 10px 40px 6px rgba(193, 193, 193, 0.2);
+    border-radius: 60px;
+    width: 100%;
+    height: 100%;
+    padding: 18px 0;
+    text-align: center;
+    border: 2px solid $text-color;
+    transition: background-color 0.2s, color 0.2s;
+    &:hover {
+      background-color: transparent;
+      color: $text-color;
+    }
+    &--trasparent {
+      background-color: transparent;
+      color: $text-color;
+      &:hover {
+        background-color: $text-color;
+        color: #fff;
+      }
+    }
+  }
+  &__company-wrapper {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: #0c1f36;
+    text-align: center;
+    font-feature-settings: "pnum" on, "lnum" on;
+  }
+  &__company-text {
+  }
+  &__company-text + &__company-text {
+    margin-top: 10px;
   }
 }
 
