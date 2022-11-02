@@ -99,7 +99,7 @@ body {
   }
   &__accent-text {
     font-size: 20px;
-    line-height: 23px;
+    line-height: calc(23 / 20);
     color: #fff;
     background: $accent-color;
     border-radius: 60px;
@@ -238,7 +238,7 @@ body {
   }
   &__info-btn {
     font-size: 17px;
-    line-height: 20px;
+    line-height: calc(20 / 17);
     color: #fff;
     background-color: $text-color;
     box-shadow: 0px 10px 40px 6px rgba(193, 193, 193, 0.2);
@@ -248,24 +248,19 @@ body {
     padding: 18px 0;
     text-align: center;
     border: 2px solid $text-color;
-    transition: background-color 0.2s, color 0.2s;
+    transition: transform 0.4s;
     &:hover {
-      background-color: transparent;
-      color: $text-color;
+      transform: scale(1.08);
     }
     &--trasparent {
       background-color: transparent;
       color: $text-color;
-      &:hover {
-        background-color: $text-color;
-        color: #fff;
-      }
     }
   }
   &__company-wrapper {
     font-weight: 600;
     font-size: 20px;
-    line-height: 23px;
+    line-height: calc(23 / 20);
     color: #0c1f36;
     text-align: center;
     font-feature-settings: "pnum" on, "lnum" on;
@@ -274,6 +269,108 @@ body {
   }
   &__company-text + &__company-text {
     margin-top: 10px;
+  }
+}
+
+.panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -33%);
+  &__inner {
+    width: 100%;
+  }
+  &__main {
+    background: #0c1f36;
+    height: 271px;
+    box-shadow: 0px 20px 40px rgba(90, 90, 90, 0.1);
+    border-radius: 60px;
+    padding: 30px 85px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    position: relative;
+    max-width: 440px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: calc(41 / 35);
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &__text {
+    font-size: 22px;
+    line-height: calc(26 / 22);
+    text-align: center;
+    color: #fff;
+  }
+  &__bottom {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 60px;
+    padding: 15px 85px;
+    box-shadow: 0px 0px 0px 0px rgba(#000, 0.2);
+    transition: box-shadow 0.2s;
+    &:hover {
+      box-shadow: 0px 0px 5px 5px rgba(#000, 0.2);
+    }
+  }
+  &__bottom-text {
+    font-size: 22px;
+    line-height: calc(26 / 22);
+    text-align: center;
+    color: #0c1f36;
+  }
+  &__bottom-text--bold {
+    font-weight: 600;
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    color: #fff;
+    background-color: #4e96ff;
+    box-shadow: 0px 30px 40px rgba(78, 150, 255, 0.25);
+    border-radius: 60px;
+    width: 540px;
+    text-align: center;
+    padding: 26px 158px 26px 161px;
+    position: relative;
+    transition: background-color 0.2s;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 120px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 26px;
+      height: 26px;
+      background: url("../images/panel/lock.png") center/contain no-repeat;
+    }
+    &:hover {
+      background-color: darken(#4e96ff, 10%);
+    }
+  }
+}
+.container {
+}
+.footer {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  &__inner {
+  }
+  &__text {
+    font-size: 22px;
+    line-height: calc(26 / 22);
+    text-align: center;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: $text-color;
   }
 }
 
