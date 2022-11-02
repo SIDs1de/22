@@ -1,8 +1,39 @@
 // Здесь находятся все медиазапросы, вынесены в отдельный файл для удобства
+@media (max-width: 1180px) {
+  .buy {
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__main {
+      margin-bottom: 54px;
+      flex: 0 1 auto;
+    }
+    &__btn {
+      &::before {
+        left: 110px;
+      }
+    }
+  }
+}
+
 @media (max-width: 670px) {
   .header {
     &__inner {
       padding: 20px 20px 0 20px;
+    }
+  }
+  .buy {
+    &__main {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .buy {
+    &__info-btn-wrapper {
+      width: 185px;
     }
   }
 }
@@ -14,6 +45,12 @@
       right: -100px;
       width: calc(1162px / 1.5);
       height: calc(1504px / 1.5);
+      overflow-y: auto;
+    }
+  }
+  .page {
+    &--525 {
+      min-height: 525px;
     }
   }
   .panel {
@@ -35,6 +72,56 @@
       @include adaptive-value("max-width", 540, 300, 1);
       &::before {
         @include adaptive-value("left", 120, 40, 1);
+      }
+    }
+  }
+}
+
+@media (max-width: 465px) {
+  .buy {
+    &__btn {
+      &::before {
+        @include adaptive-value("left", 480, 40, 1);
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .buy {
+    &__title {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .buy {
+    &__info-btn-wrapper {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .buy {
+    &__select-wrapper {
+      &::before {
+        width: calc(16px / 1.5);
+        height: calc(9px / 1.5);
+        right: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .buy {
+    &__select-wrapper {
+      &::before {
+        width: calc(16px / 1.5);
+        height: calc(9px / 1.5);
+        right: 12px;
       }
     }
   }

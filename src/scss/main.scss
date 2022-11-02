@@ -48,7 +48,7 @@ body {
 
 .page {
   &__header {
-    margin-bottom: 160px;
+    @include adaptive-value("margin-bottom", 160, 30, 1);
   }
 }
 
@@ -63,9 +63,7 @@ body {
   &__logo-img {
     transition: filter 0.3s;
     width: 229px;
-    // height: 79px;
     @include adaptive-value("width", 229, 150, 1);
-    // @include adaptive-value('height', 79, 40, 1);
     &:hover {
       filter: drop-shadow(1px 1px 3px rgba(#b700ff, 0.3));
     }
@@ -76,9 +74,11 @@ body {
   &__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__main {
-    flex: 1 0 540px;
+    flex: 1 1 540px;
+    margin-right: 50px;
   }
   &__title {
     margin-bottom: 15px;
@@ -102,15 +102,15 @@ body {
     }
   }
   &__accent-text {
-    font-size: 20px;
+    @include adaptive-value("font-size", 20, 17, 1);
     line-height: calc(23 / 20);
     color: #fff;
     background: $accent-color;
     border-radius: 60px;
-    padding: 15px 0;
+    padding: 15px 20px;
     text-align: center;
     max-width: 425px;
-    margin-bottom: 50px;
+    @include adaptive-value("margin-bottom", 50, 25, 1);
     transition: background-color 0.2s;
     &:hover {
       background-color: lighten($accent-color, 10%);
@@ -119,15 +119,18 @@ body {
   &__form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    @include adaptive-value("margin-bottom", 50, 25, 1);
   }
   &__input {
     max-width: 540px;
     width: 100%;
     border: 2px solid #0c1f36;
     border-radius: 60px;
-    padding: 23px;
-    font-size: 20px;
+    @include adaptive-value("padding-top", 23, 15, 1);
+    @include adaptive-value("padding-bottom", 23, 15, 1);
+    @include adaptive-value("padding-left", 23, 25, 1);
+    @include adaptive-value("padding-right", 23, 25, 1);
+    @include adaptive-value("font-size", 20, 17, 1);
     line-height: calc(23 / 20);
     color: $text-color;
     transition: border-radius 0.15s;
@@ -141,7 +144,7 @@ body {
       box-shadow: 1px 1px 6px rgba(#000, 0.5);
     }
     &::placeholder {
-      font-size: 20px;
+      @include adaptive-value("font-size", 20, 17, 1);
       line-height: calc(23 / 20);
       color: $text-color;
     }
@@ -170,6 +173,12 @@ body {
       height: 9px;
       background: url("../images/buy/arrow.svg") center/contain no-repeat;
       pointer-events: none;
+      transition: transform 0.15s;
+    }
+  }
+  &__select-wrapper._open {
+    &::before {
+      transform: translateY(-50%) rotate(180deg);
     }
   }
   &__select {
@@ -180,7 +189,7 @@ body {
     font-feature-settings: "pnum" on, "lnum" on;
   }
   &__btn {
-    margin-top: 30px;
+    @include adaptive-value("margin-top", 30, 15, 1);
     max-width: 540px;
     width: 100%;
     background: #4e96ff;
@@ -188,10 +197,14 @@ body {
     border-radius: 60px;
     border: none;
     outline: none;
-    padding: 26px 162px 23px 204px;
+    padding-top: 26px;
+    padding-bottom: 23px;
+    padding-left: 40px;
+    @include adaptive-value("padding-top", 26, 18, 1);
+    @include adaptive-value("padding-bottom", 23, 18, 1);
     text-align: center;
     font-weight: 600;
-    font-size: 20px;
+    @include adaptive-value("font-size", 20, 16, 1);
     line-height: calc(23 / 20);
     color: #fff;
     cursor: pointer;
@@ -226,6 +239,7 @@ body {
     width: 100%;
   }
   &__vk-groups {
+    margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 1px 1px 10px rgba(#000, 0.2);
@@ -235,18 +249,21 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: -10px;
-    margin-bottom: 40px;
+    @include adaptive-value("margin-bottom", 40, 20, 1);
+    justify-content: center;
   }
   &__info-btn-wrapper {
     margin: 10px;
-    width: 260px;
+    max-width: 260px;
+    width: 100%;
     height: 60px;
     display: flex;
     justify-content: center;
+    flex: 0 1 auto;
     align-items: center;
   }
   &__info-btn {
-    font-size: 17px;
+    @include adaptive-value("font-size", 17, 14, 1);
     line-height: calc(20 / 17);
     color: #fff;
     background-color: $text-color;
@@ -268,11 +285,12 @@ body {
   }
   &__company-wrapper {
     font-weight: 600;
-    font-size: 20px;
+    @include adaptive-value("font-size", 20, 16, 1);
     line-height: calc(23 / 20);
     color: #0c1f36;
     text-align: center;
     font-feature-settings: "pnum" on, "lnum" on;
+    margin-bottom: 15px;
   }
   &__company-text {
   }
@@ -280,7 +298,6 @@ body {
     margin-top: 10px;
   }
 }
-
 .panel {
   position: absolute;
   top: 50%;
