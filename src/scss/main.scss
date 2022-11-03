@@ -422,14 +422,14 @@ body {
     user-select: initial;
     pointer-events: initial;
     .popup__body {
-      transform: rotateX(0);
+      transform: translateY(0);
     }
   }
   &__body {
     max-width: 540px;
     width: 100%;
     min-height: 550px;
-    transform: translateY(-200px) perspective(400px) rotateX(50deg);
+    transform: translateY(-200px);
     transition: transform 0.8s;
     display: flex;
     justify-content: center;
