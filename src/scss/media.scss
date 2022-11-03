@@ -30,6 +30,20 @@
   }
 }
 
+@media (max-height: 850px) {
+  .popup {
+    &--bg {
+      overflow-y: auto;
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  .popup {
+    overflow-y: auto;
+  }
+}
+
 @media (max-width: 600px) {
   .buy {
     &__info-btn-wrapper {

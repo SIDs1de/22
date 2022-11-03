@@ -56,6 +56,7 @@
 
 
   <!-- STYLES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="css/main.min.css" rel="stylesheet">
 
   <!-- SCRIPTS -->
@@ -63,10 +64,10 @@
 
 </head>
 
-<body class="page page--525">
+<body class="page page--525 wow animate__animated animate__fadeIn">
 
   <!-- HEADER -->
-  <header class="header page__header">
+  <header class="header page__header wow animate__animated animate__fadeInDown">
     <!-- HEADER__INNER -->
     <div class="header__inner">
       <div class="header__logo-wrapper">
@@ -100,7 +101,7 @@
               </p>
             </a>
           </div>
-          <a class="panel__link" href="#">
+          <a class="panel__link wow animate__animated animate__fadeInUp" data-wow-delay=".5s" href="#">
             Авторизация через VK
           </a>
         </div>
@@ -114,7 +115,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <p class="footer__text">
+        <p class="footer__text wow animate__animated animate__fadeIn" data-wow-delay=".7s">
           © 2018–2022
         </p>
       </div>
@@ -122,6 +123,7 @@
   </footer>
 
   <!-- Подключение скриптов -->
+  <script src="js/wow.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 

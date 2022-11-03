@@ -56,6 +56,7 @@
 
 
   <!-- STYLES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="css/main.min.css" rel="stylesheet">
 
   <!-- SCRIPTS -->
@@ -63,10 +64,10 @@
 
 </head>
 
-<body class="page page--bottom">
+<body class="page page--bottom wow animate__animated animate__fadeIn">
 
   <!-- HEADER -->
-  <header class="header page__header">
+  <header class="header page__header animate__animated animate__fadeInDown">
     <!-- HEADER__INNER -->
     <div class="header__inner">
       <div class="header__logo-wrapper">
@@ -89,17 +90,17 @@
         <div class="buy__inner">
           <!-- BUY__MAIN -->
           <div class="buy__main">
-            <h1 class="buy__title main-title">
+            <h1 class="buy__title main-title wow animate__animated animate__fadeInLeft">
               ПОКУПКА ДОНАТА
             </h1>
-            <p class="buy__accent-text">
+            <p class="buy__accent-text wow animate__animated animate__fadeInLeft" data-wow-delay=".2s">
               При покупке доната КОМИССИИ&nbsp;НЕТ!
             </p>
             <!-- BUY__FORM -->
             <form class="buy__form" action="#">
-              <input class="buy__input buy__text-input" type="text" name="id" placeholder="Ваш игровой ID у бота"
+              <input class="buy__input buy__text-input wow animate__animated animate__fadeInLeft" data-wow-delay=".5s" type="text" name="id" placeholder="Ваш игровой ID у бота"
                 required>
-              <div class="buy__select-wrapper">
+              <div class="buy__select-wrapper wow animate__animated animate__fadeInLeft" data-wow-delay=".6s">
                 <select class="buy__input buy__select" id="selid" name="selid" required>
                   <option disabled selected>
                     Выберите товар для покупки
@@ -175,10 +176,10 @@
                   </optgroup>
                 </select>
               </div>
-              <button class="buy__btn" type="submit">Перейти к оплате</button>
+              <button class="buy__btn wow animate__animated animate__fadeInLeft" type="submit" data-wow-delay=".7s">Перейти к оплате</button>
             </form>
             <!-- / BUY__FORM -->
-            <div class="buy__paying">
+            <div class="buy__paying wow animate__animated animate__fadeInUp" data-wow-delay="1s">
               <picture>
                 <source srcset="images/buy/buy-cards.webp" type="image/webp">
                 <img class="buy__paying-inner" src="images/buy/buy-cards.png" alt="Оплатить">
@@ -187,26 +188,26 @@
           </div>
           <!-- / BUY__MAIN -->
           <!-- BUY__INFO -->
-          <div class="buy__info">
+          <div class="buy__info wow animate__animated animate__fadeIn" data-wow-delay=".4s">
             <div class="buy__vk-groups vk-groups" id="vk_groups"></div>
             <!-- BUY__INFO-BTNS-LIST -->
             <ul class="buy__info-btns-list">
-              <li class="buy__info-btn-wrapper">
+              <li class="buy__info-btn-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".5s">
                 <a class="buy__info-btn" href="#">Соглашение</a>
               </li>
-              <li class="buy__info-btn-wrapper">
+              <li class="buy__info-btn-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".7s">
                 <a class="buy__info-btn" href="#">Конфиденциальность</a>
               </li>
-              <li class="buy__info-btn-wrapper">
-                <a class="buy__info-btn buy__info-btn--trasparent" href="#">Описание товаров</a>
+              <li class="buy__info-btn-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".9s">
+                <a class="buy__info-btn buy__info-btn--trasparent" href="#" data-open-popup="2">Описание товаров</a>
               </li>
-              <li class="buy__info-btn-wrapper">
-                <a class="buy__info-btn buy__info-btn--trasparent" href="#">Контакты</a>
+              <li class="buy__info-btn-wrapper wow animate__animated animate__fadeIn" data-wow-delay="1.1s">
+                <a class="buy__info-btn buy__info-btn--trasparent" href="#" data-open-popup="1">Контакты</a>
               </li>
             </ul>
             <!-- / BUY__INFO-BTNS-LIST -->
 
-            <div class="buy__company-wrapper">
+            <div class="buy__company-wrapper wow animate__animated animate__fadeIn" data-wow-delay="2s">
               <p class="buy__company-text">
                 ИП Чернышев Егор Алексеевич
               </p>
@@ -227,7 +228,133 @@
   </main>
   <!-- / MAIN -->
 
+  <!-- POPUPS -->
+  <!-- POPUP -->
+  <div class="popup" data-popup="1">
+    <!-- POPUP__BODY -->
+    <div class="popup__body">
+      <!-- POPUP__INNER -->
+      <div class="popup__inner">
+        <!-- POPUP__INNER-HEAD -->
+        <div class="popup__innner-head">
+          <p class="popup__inner-title">
+            Контакты
+          </p>
+          <div class="popup__inner-close">
+            <img src="images/popup/close.svg" alt="закрыть модальное окно">
+          </div>
+        </div>
+        <!-- / POPUP__INNER-HEAD -->
+        <!-- POPUP__INNER-MAIN -->
+        <div class="popup__inner-main">
+          <p class="popup__inner-main-title">
+            Связаться с нами
+          </p>
+          <ul class="popup__inner-list">
+            <li class="popup__inner-item">
+              ИП Чернышев Егор Алексеевич
+            </li>
+            <li class="popup__inner-item">
+              ИНН 165036599758
+            </li>
+            <li class="popup__inner-item">
+              ОГРН 321169000123641
+            </li>
+            <li class="popup__inner-item">
+              Телефон +79600825096
+            </li>
+            <li class="popup__inner-item">
+              Почта gorillabot@mail.ru
+            </li>
+            <li class="popup__inner-item">
+              VK https://vk.com/gorillabot
+            </li>
+          </ul>
+        </div>
+        <!-- / POPUP__INNER-MAIN -->
+      </div>
+      <!-- / POPUP__INNER -->
+    </div>
+    <!-- / POPUP__BODY -->
+    <div class="popup__bg"></div>
+  </div>
+  <!-- / POPUP -->
+
+  <!-- POPUP -->
+  <div class="popup popup--bg" data-popup="2">
+    <!-- POPUP__BODY -->
+    <div class="popup__body">
+      <!-- POPUP__INNER -->
+      <div class="popup__inner">
+        <!-- POPUP__INNER-HEAD -->
+        <div class="popup__innner-head">
+          <p class="popup__inner-title">
+            Описание товаров
+          </p>
+          <div class="popup__inner-close">
+            <img src="images/popup/close.svg" alt="закрыть модальное окно">
+          </div>
+        </div>
+        <!-- / POPUP__INNER-HEAD -->
+        <!-- POPUP__INNER-MAIN -->
+        <div class="popup__inner-main">
+          <p class="popup__inner-main-title">
+            Администратор (навсегда)
+          </p>
+          <ul class="popup__inner-list">
+            <li class="popup__inner-item">
+              Выдача игровой валюты себе и другим игрокам.
+            </li>
+            <li class="popup__inner-item">
+              Бонус в Double увеличен до 500 GB.
+            </li>
+            <li class="popup__inner-item">
+              Возможность отвечать на репорты (вопросы игроков в беседе администрации).
+            </li>
+            <li class="popup__inner-item">
+              Возможность бана/разбана игроков.
+            </li>
+            <li class="popup__inner-item">
+              Возможность сменить ник другому игроку.
+            </li>
+            <li class="popup__inner-item">
+              Возможность ставить длинный ник.
+            </li>
+            <li class="popup__inner-item">
+              Возможность менять названия имуществу из профиля.
+            </li>
+            <li class="popup__inner-item">
+              Возможность получить ссылку на случайную беседу с ботом.
+            </li>
+            <li class="popup__inner-item">
+              Возможность кикать людей из офицальных бесед с ботом (дабл и аукцион).
+            </li>
+            <li class="popup__inner-item">
+              Отключен лимит на количество ферм.
+            </li>
+            <li class="popup__inner-item">
+              Секретный пункт в имуществе.
+            </li>
+            <li class="popup__inner-item">
+              Возможность показать ненастоящий профиль.
+            </li>
+            <li class="popup__inner-item">
+              Возможность выдачи капчи игроку.
+            </li>
+          </ul>
+        </div>
+        <!-- / POPUP__INNER-MAIN -->
+      </div>
+      <!-- / POPUP__INNER -->
+    </div>
+    <!-- / POPUP__BODY -->
+    <div class="popup__bg"></div>
+  </div>
+  <!-- / POPUP -->
+  <!-- / POPUPS -->
+
   <!-- Подключение скриптов -->
+  <script src="js/wow.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
