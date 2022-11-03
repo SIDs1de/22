@@ -45,12 +45,18 @@
       right: -100px;
       width: calc(1162px / 1.5);
       height: calc(1504px / 1.5);
-      overflow-y: auto;
     }
   }
   .page {
     &--525 {
       min-height: 525px;
+      height: 100vh;
+    }
+    &--bottom {
+      &::before {
+        top: auto;
+        bottom: -300px;
+      }
     }
   }
   .panel {
@@ -95,14 +101,12 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 435px) {
   .container {
     padding: 0 10px;
   }
   .main-title {
     font-size: 34px;
-    margin: 0 auto;
-    display: block;
     margin-bottom: 7px;
   }
   .buy {
@@ -110,9 +114,11 @@
       margin-bottom: 36px;
     }
     &__accent-text {
+      width: auto;
+      text-align-last: left;
+      display: inline-block;
       font-size: 14px;
-      padding-left: 14px;
-      padding-right: 14px;
+      padding: 7px 14px;
       margin-bottom: 20px;
     }
     &__input {
@@ -120,6 +126,12 @@
     }
     &__btn {
       font-size: 15px;
+      padding: 14px 43px 14px 115px;
+      &::before {
+        width: 14px;
+        height: 14px;
+        left: 35%;
+      }
     }
     &__info-btn {
       font-size: 13px;
@@ -160,6 +172,21 @@
     }
     &__select {
       padding-right: 33px;
+    }
+    &__btn {
+      &::before {
+        left: 32%;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .page {
+    &--bottom {
+      &::before {
+        bottom: -200px;
+      }
     }
   }
 }
