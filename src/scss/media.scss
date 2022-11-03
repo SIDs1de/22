@@ -17,6 +17,72 @@
   }
 }
 
+@media (min-width: 670px) {
+  .header {
+    &__logo-img {
+      &:hover {
+        filter: drop-shadow(1px 1px 3px rgba(#b700ff, 0.3));
+      }
+    }
+  }
+  .buy {
+    &__title {
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    &__accent-text {
+      &:hover {
+        background-color: lighten($accent-color, 10%);
+      }
+    }
+    &__input {
+      &:hover {
+        box-shadow: 1px 1px 6px rgba(#000, 0.5);
+      }
+    }
+    &__btn {
+      &:hover {
+        background: darken(#4e96ff, 10%);
+      }
+    }
+    &__paying-inner {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &__info-btn {
+      &:hover {
+        transform: scale(1.08);
+      }
+    }
+  }
+  .panel {
+    &__bottom {
+      &:hover {
+        box-shadow: 0px 0px 5px 5px rgba(#000, 0.2);
+      }
+    }
+    &__link {
+      &:hover {
+        background-color: darken(#4e96ff, 10%);
+      }
+    }
+  }
+  .footer {
+    &__text {
+      &:hover {
+        &::before {
+          transform: translateY(0);
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 670px) {
   .header {
     &__inner {

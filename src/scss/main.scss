@@ -71,9 +71,6 @@ body {
     transition: filter 0.3s;
     width: 229px;
     @include adaptive-value("width", 229, 150, 1);
-    &:hover {
-      filter: drop-shadow(1px 1px 3px rgba(#b700ff, 0.3));
-    }
   }
 }
 
@@ -102,11 +99,6 @@ body {
       background-color: $text-color;
       transition: width 0.3s;
     }
-    &:hover {
-      &::before {
-        width: 100%;
-      }
-    }
   }
   &__accent-text {
     @include adaptive-value("font-size", 20, 17, 1);
@@ -119,9 +111,6 @@ body {
     max-width: 425px;
     @include adaptive-value("margin-bottom", 50, 25, 1);
     transition: background-color 0.2s;
-    &:hover {
-      background-color: lighten($accent-color, 10%);
-    }
   }
   &__form {
     display: flex;
@@ -147,9 +136,6 @@ body {
     transition: box-shadow 0.2s;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     letter-spacing: 0.4px;
-    &:hover {
-      box-shadow: 1px 1px 6px rgba(#000, 0.5);
-    }
     &::placeholder {
       @include adaptive-value("font-size", 20, 17, 1);
       line-height: calc(23 / 20);
@@ -231,9 +217,6 @@ body {
       height: 27px;
       background: url("../images/buy/cart.png") center/contain no-repeat;
     }
-    &:hover {
-      background: darken(#4e96ff, 10%);
-    }
   }
   &__paying {
     max-width: 540px;
@@ -241,9 +224,6 @@ body {
   }
   &__paying-inner {
     transition: transform 0.5s;
-    &:hover {
-      transform: scale(1.1);
-    }
   }
   &__info {
     max-width: 541px;
@@ -291,9 +271,6 @@ body {
     text-align: center;
     border: 2px solid $text-color;
     transition: transform 0.4s;
-    &:hover {
-      transform: scale(1.08);
-    }
     &--trasparent {
       background-color: transparent;
       color: $text-color;
@@ -356,9 +333,6 @@ body {
     padding: 15px 85px;
     box-shadow: 0px 0px 0px 0px rgba(#000, 0.2);
     transition: box-shadow 0.2s;
-    &:hover {
-      box-shadow: 0px 0px 5px 5px rgba(#000, 0.2);
-    }
   }
   &__bottom-text {
     @include adaptive-value("font-size", 22, 18, 1);
@@ -393,9 +367,6 @@ body {
       @include adaptive-value("height", 26, 15, 1);
       background: url("../images/panel/lock.png") center/contain no-repeat;
     }
-    &:hover {
-      background-color: darken(#4e96ff, 10%);
-    }
   }
 }
 .footer {
@@ -423,12 +394,6 @@ body {
       opacity: 0;
       transform: translateY(10px);
       transition: transform 0.2s, opacity 0.2s;
-    }
-    &:hover {
-      &::before {
-        transform: translateY(0);
-        opacity: 0.7;
-      }
     }
   }
 }
