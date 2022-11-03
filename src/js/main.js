@@ -146,6 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
     resetAnimation: true, // reset animation on end (default is true)
   }).init();
 
+  const validator = () => {
+    const form = document.querySelector('.buy__form');
+  };
+
+  validator();
   wows();
   vkSwitchWidth();
   selectSwitch();
