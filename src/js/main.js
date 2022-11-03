@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
       popups.forEach((popup) => {
         const popupBody = popup.querySelector('.popup__body');
         const popupInner = popup.querySelector('.popup__inner');
-        popupBody.style.minHeight = popupInner.offsetHeight + 'px';
+        popupBody.style.minHeight = popupInner.offsetHeight + 20 + 'px';
       });
     }
   };
