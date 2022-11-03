@@ -119,6 +119,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const wows = () => {
+    if (window.innerWidth < 700) {
+      const infoListBtns = document.querySelectorAll('.buy__info-btn-wrapper');
+      const companyText = document.querySelector('.buy__company-wrapper');
+
+      companyText.dataset.wowDelay = '0s';
+      infoListBtns[0].dataset.wowDelay = '0s';
+      infoListBtns[1].dataset.wowDelay = '.2s';
+      infoListBtns[2].dataset.wowDelay = '.4s';
+      infoListBtns[3].dataset.wowDelay = '.6s';
+    }
+  };
+
   new WOW({
     boxClass: 'wow', // animated element css class (default is wow)
     animateClass: 'animated', // animation css class (default is animated)
@@ -133,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resetAnimation: true, // reset animation on end (default is true)
   }).init();
 
+  wows();
   vkSwitchWidth();
   selectSwitch();
   popupsScript();
