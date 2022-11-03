@@ -128,15 +128,15 @@
     }
   }
   .page {
-    &--525 {
-      min-height: 525px;
-      height: 100vh;
-    }
     &--bottom {
       &::before {
         top: auto;
         bottom: -300px;
       }
+    }
+    &--525 {
+      min-height: 525px;
+      height: 100vh;
     }
   }
   .panel {
