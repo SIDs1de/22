@@ -119,7 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
       popups.forEach((popup) => {
         const popupBody = popup.querySelector('.popup__body');
         const popupInner = popup.querySelector('.popup__inner');
-        console.log(popupInner.offsetHeight);
         popupBody.style.minHeight = popupInner.offsetHeight + 'px';
       });
     }
@@ -165,18 +164,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     formBtn.addEventListener('click', () => {
       event.preventDefault();
-      // console.log(textInput.value);
-      // console.log(select.value);
 
       if (!textInput.value) {
         textInputSpan.innerHTML = 'Заполните поле!';
-      } else if (!re.test(textInput.value)) {
-        textInputSpan.innerHTML = 'Поле должно содержать только цифры!';
       } else {
-        textInputSpan.innerHTML = '';
-      }
-
-      if (textInput.value === 'vk.com' || textInput.value === 'id') {
         textInputSpan.innerHTML = '';
       }
 
@@ -186,11 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selectSpan.innerHTML = '';
       }
 
-      if (
-        textInput.value &&
-        re.test(textInput.value) &&
-        select.value !== 'Выберите товар для покупки'
-      ) {
+      if (textInput.value && select.value !== 'Выберите товар для покупки') {
         form.submit();
       }
     });
