@@ -148,6 +148,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const validator = () => {
     const form = document.querySelector('.buy__form');
+    const formBtn = document.querySelector('.buy__btn');
+    const textInput = document.querySelector('.buy__text-input');
+    const select = document.querySelector('.buy__select');
+
+    const textInputSpan = document.querySelector('.buy__input-span');
+    const selectSpan = document.querySelector('.buy__select-span');
+
+    const re = new RegExp('^[0-9]+$');
+
+    formBtn.addEventListener('click', () => {
+      event.preventDefault();
+      // console.log(textInput.value);
+      // console.log(select.value);
+
+      console.log(re.test(textInput.value));
+
+      if (!textInput.value) {
+        textInputSpan.innerHTML = 'Заполните поле!';
+      } else if (!re.test(textInput.value)) {
+        textInputSpan.innerHTML = 'Поле должно содержать только цифры!';
+      } else {
+        textInputSpan.innerHTML = '';
+      }
+      if (select.value === 'Выберите товар для покупки') {
+        selectSpan.innerHTML = 'Вы не выбрали товар для покупки!';
+      } else {
+        selectSpan.innerHTML = '';
+      }
+
+      if (
+        textInput.value &&
+        re.test(textInput.value) &&
+        select.value !== 'Выберите товар для покупки'
+      ) {
+        form.submit();
+      }
+    });
   };
 
   validator();
