@@ -116,6 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         });
       });
+      popups.forEach((popup) => {
+        const popupBody = popup.querySelector('.popup__body');
+        const popupInner = popup.querySelector('.popup__inner');
+        console.log(popupInner.offsetHeight);
+        popupBody.style.minHeight = popupInner.offsetHeight + 'px';
+      });
     }
   };
 
@@ -136,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     boxClass: 'wow', // animated element css class (default is wow)
     animateClass: 'animated', // animation css class (default is animated)
     offset: 0, // distance to the element when triggering the animation (default is 0)
-    mobile: true, // trigger animations on mobile devices (default is true)
+    mobile: false, // trigger animations on mobile devices (default is true)
     live: true, // act on asynchronously loaded content (default is true)
     callback: function (box) {
       // the callback is fired every time an animation is started
@@ -162,8 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // console.log(textInput.value);
       // console.log(select.value);
 
-      console.log(re.test(textInput.value));
-
       if (!textInput.value) {
         textInputSpan.innerHTML = 'Заполните поле!';
       } else if (!re.test(textInput.value)) {
@@ -171,6 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         textInputSpan.innerHTML = '';
       }
+
+      if (textInput.value === 'vk.com' || textInput.value === 'id') {
+        textInputSpan.innerHTML = '';
+      }
+
       if (select.value === 'Выберите товар для покупки') {
         selectSpan.innerHTML = 'Вы не выбрали товар для покупки!';
       } else {
