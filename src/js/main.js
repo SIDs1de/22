@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
           {
             mode: 3,
             width: 270,
-            height: 204,
+            height: 210,
             color1: 'FFFFFF',
             color2: '000000',
             color3: '5181B8',
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
           {
             mode: 3,
             width: 320,
-            height: 204,
+            height: 210,
             color1: 'FFFFFF',
             color2: '000000',
             color3: '5181B8',
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
           {
             mode: 3,
             width: 370,
-            height: 204,
+            height: 210,
             color1: 'FFFFFF',
             color2: '000000',
             color3: '5181B8',
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
           'vk_groups',
           {
             mode: 3,
-            width: 500,
-            height: 204,
+            width: 440,
+            height: 210,
             color1: 'FFFFFF',
             color2: '000000',
             color3: '5181B8',
