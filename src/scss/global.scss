@@ -2,6 +2,6 @@
 
 .main-title {
   font-weight: 800;
-  @include adaptive-value("font-size", 50, 40, 1);
+  @include adaptive-value("font-size", 40, 38, 1);
   line-height: calc(59 / 50);
 }

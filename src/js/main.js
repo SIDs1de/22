@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
           'vk_groups',
           {
             mode: 3,
-            width: 541,
+            width: 520,
             height: 204,
             color1: 'FFFFFF',
             color2: '000000',
