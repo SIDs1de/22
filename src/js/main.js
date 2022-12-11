@@ -183,9 +183,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const vkRepair = () => {
+    setTimeout(() => {
+      const vkIframe = document.querySelector('.vk-groups iframe');
+      vkIframe.setAttribute('height', 200)
+    }, 500)
+    setTimeout(() => {
+      const vkIframe = document.querySelector('.vk-groups iframe');
+      vkIframe.setAttribute('height', 200)
+    }, 1500)
+
+    setTimeout(() => {
+      const vkIframe = document.querySelector('.vk-groups iframe');
+      vkIframe.setAttribute('height', 200)
+    }, 2500)
+
+    setTimeout(() => {
+      const vkIframe = document.querySelector('.vk-groups iframe');
+      vkIframe.setAttribute('height', 200)
+    }, 5500)
+    setTimeout(() => {
+      const vkIframe = document.querySelector('.vk-groups iframe');
+      vkIframe.setAttribute('height', 200)
+    }, 10500)
+  };
+
   validator();
   wows();
   vkSwitchWidth();
   selectSwitch();
   popupsScript();
+  vkRepair();
 });
