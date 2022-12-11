@@ -105,15 +105,15 @@ body {
     }
   }
   &__accent-text {
-    @include adaptive-value("font-size", 19, 17, 1);
+    @include adaptive-value("font-size", 17, 16, 1);
     line-height: calc(23 / 20);
     color: #fff;
     background: $accent-color;
     border-radius: 60px;
     padding: 12px 15px;
     text-align: center;
-    max-width: 420px;
-    @include adaptive-value("margin-bottom", 35, 25, 1);
+    max-width: 360px;
+    @include adaptive-value("margin-bottom", 30, 25, 1);
     transition: background-color 0.2s;
   }
   &__form {
@@ -458,7 +458,7 @@ body {
   &__innner-head {
     background: $text-color;
     border-radius: 30px;
-    @include adaptive-value("padding", 30, 20, 1);
+    @include adaptive-value("padding", 28, 20, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -466,7 +466,7 @@ body {
   }
   &__inner-title {
     font-weight: 700;
-    @include adaptive-value("font-size", 25, 18, 1);
+    @include adaptive-value("font-size", 23, 18, 1);
     line-height: calc(29 / 25);
     text-transform: uppercase;
     color: #fff;
@@ -475,7 +475,7 @@ body {
     cursor: pointer;
   }
   &__inner-main {
-    @include adaptive-value("padding", 30, 20, 1);
+    @include adaptive-value("padding", 28, 20, 1);
     background-color: #fff;
     border-radius: 30px;
     position: relative;
@@ -483,13 +483,13 @@ body {
   }
   &__inner-main-title {
     font-weight: 600;
-    @include adaptive-value("font-size", 22, 18, 1);
+    @include adaptive-value("font-size", 20, 18, 1);
     line-height: calc(26 / 22);
     color: $text-color;
-    @include adaptive-value("margin-bottom", 15, 8, 1);
+    @include adaptive-value("margin-bottom", 14, 8, 1);
   }
   &__inner-list {
-    @include adaptive-value("font-size", 20, 15, 1);
+    @include adaptive-value("font-size", 18, 15, 1);
     line-height: 126.9%;
     font-feature-settings: "pnum" on, "lnum" on;
     color: $text-color;
