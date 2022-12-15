@@ -1,5 +1,10 @@
 // Здесь находятся все медиазапросы, вынесены в отдельный файл для удобства
 @media (max-width: 1180px) {
+  .page {
+    &__header {
+      @include adaptive-value("margin-bottom", 120, 30, 1);
+    }
+  }
   .buy {
     &__inner {
       flex-direction: column;
