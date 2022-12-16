@@ -34,12 +34,10 @@ body {
   &::before {
     content: "";
     position: absolute;
-    top: -170px;
+    top: -196px;
     right: -26px;
-    // width: 1162px;
-    width: 930px;
-    // height: 1504px;
-    height: 1232px;
+    width: 60vw;
+    height: 157vh;
     z-index: -10;
     background: url("../images/global/main-bg.jpg") center/contain no-repeat;
   }
@@ -47,7 +45,6 @@ body {
 
 .container {
   max-width: 1035px;
-  // max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 }
