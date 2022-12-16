@@ -74,7 +74,7 @@ body {
   }
   &__logo-img {
     transition: filter 0.3s;
-    @include adaptive-value("width", 179, 150, 1);
+    @include adaptive-value("width", 229, 150, 1);
   }
 }
 
