@@ -99,6 +99,17 @@
       }
     }
   }
+  .alert-warning {
+    &:hover {
+      background-color: lighten(#f0ad4e, 10%);
+    }
+  }
+
+  .alert-danger {
+    &:hover {
+      background-color: lighten(#d9534f, 10%);
+    }
+  }
   .panel {
     &__bottom {
       &:hover {

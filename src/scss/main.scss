@@ -123,7 +123,6 @@ body {
     @include adaptive-value("font-size", 16, 16, 1);
     line-height: calc(23 / 20);
     color: #fff;
-    background: $accent-color;
     border-radius: 60px;
     padding: 12px 12px;
     text-align: center;

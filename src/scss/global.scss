@@ -5,3 +5,15 @@
   @include adaptive-value("font-size", 40, 38, 1);
   line-height: calc(59 / 50);
 }
+
+.alert-success {
+  background: $accent-color;
+}
+
+.alert-warning {
+  background: #f0ad4e;
+}
+
+.alert-danger {
+  background: #d9534f;
+}
