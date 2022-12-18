@@ -1,4 +1,14 @@
 // Здесь находятся все медиазапросы, вынесены в отдельный файл для удобства
+@media (max-height: 740px) {
+  .header {
+    position: static;
+  }
+}
+@media (max-height: 650px) {
+  .header{
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 1180px) {
   .page {
     &__header {
