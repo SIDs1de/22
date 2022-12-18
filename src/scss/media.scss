@@ -9,6 +9,16 @@
     margin-bottom: 30px;
   }
 }
+
+@media (min-width: 1921px) {
+  .header {
+    &__inner {
+      padding-left: 295px;
+      padding-right: 295px;
+    }
+  }
+}
+
 @media (max-width: 1400px) {
   .header {
     &__inner {
