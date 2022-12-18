@@ -3,6 +3,7 @@
   .page {
     &__header {
       @include adaptive-value("margin-bottom", 120, 30, 1);
+      position: static;
     }
   }
   .buy {

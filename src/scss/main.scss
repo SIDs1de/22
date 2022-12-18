@@ -57,6 +57,10 @@ body {
   display: flex;
   flex-direction: column;
   &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
   &--525 {
     min-height: 700px;
@@ -68,7 +72,10 @@ body {
   &__inner {
     max-width: 1920px;
     margin: 0 auto;
-    padding: 26px 295px 0;
+    @include adaptive-value("padding-top", 26, 20, 1);
+    @include adaptive-value("padding-left", 295, 20, 1);
+    @include adaptive-value("padding-right", 295, 20, 1);
+    padding-bottom: 0;
   }
   &__logo-wrapper {
   }
@@ -82,7 +89,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .buy {
