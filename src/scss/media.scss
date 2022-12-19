@@ -49,6 +49,12 @@
       margin-bottom: 54px;
       flex: 0 1 auto;
     }
+    &__accent-text {
+      display: block;
+      text-align: center;
+      max-width: 340px;
+      padding: 12px 12px;
+    }
     &__btn {
       &::before {
         left: 110px;
