@@ -606,6 +606,9 @@ body {
       &__title {
         margin-bottom: 20px;
       }
+      &__btn {
+        @include adaptive-value("margin-top", 15, 15, 1);
+      }
     }
   }
 }
