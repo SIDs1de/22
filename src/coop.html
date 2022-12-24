@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BotGorilla</title>
+
+  <!-- For search engines -->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="image" content="images/global/preview.jpg"> <!-- Preview -->
+
+  <!-- For social networks -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BotGorilla">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="images/global/preview.jpg"> <!-- Preview -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:site_name" content="BotGorilla">
+
+  <!-- ICONS -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/global/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/global/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/global/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/global/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/global/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/global/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/global/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/global/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/global/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/global/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/global/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/global/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/global/favicon-16x16.png">
+  <link rel="manifest" href="images/global/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/global/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <meta name="apple-mobile-web-app-title" content="BotGorilla"> <!-- Name on the phone screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Opening the site to full screen -->
+
+  <meta name="format-detection" content="telephone=no"> <!-- No need for extra illumination -->
+  <meta name="format-detection" content="address=no">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="css/main.min.css" rel="stylesheet">
+
+  <!-- SCRIPTS -->
+  <script src="https://vk.com/js/api/openapi.js?168"></script>
+
+</head>
+
+<body class="page page--bottom wow animate__animated animate__fadeIn">
+
+  <!-- HEADER -->
+  <header class="header page__header animate__animated animate__fadeInDown">
+    <!-- HEADER__INNER -->
+    <div class="header__inner">
+      <div class="header__logo-wrapper">
+        <picture>
+          <source srcset="images/header/logo.webp" type="image/webp">
+          <img class="header__logo-img" src="images/header/logo.png" alt="Логотип BotGorilla">
+        </picture>
+      </div>
+    </div>
+    <!-- / HEADER__INNER -->
+  </header>
+  <!-- / HEADER -->
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- BUY -->
+    <section class="buy">
+      <div class="container">
+        <!-- BUY__INNER -->
+        <div class="buy__inner">
+          <!-- BUY__MAIN -->
+          <div class="buy__main wow animate__animated animate__fadeInLeft">
+            <h1 class="buy__title main-title">
+              ПОКУПКА ДОНАТА
+            </h1>
+            <!-- alert-success alert-warning alert-danger -->
+            <p class="buy__accent-text alert-success">
+              При покупке доната КОМИССИИ&nbsp;НЕТ!
+            </p>
+            <!-- BUY__FORM -->
+            <form class="buy__form" action="#">
+              <span class="buy__input-span buy__input-text-span"></span>
+              <input class="buy__input buy__text-input" type="text" name="id" placeholder="Ваш игровой ID у бота"
+                required>
+              <span class="buy__input-span buy__select-span"></span>
+              <div class="buy__select-wrapper">
+                <select class="buy__input buy__select" id="selid" name="selid" required>
+                  <option disabled selected>
+                    Выберите товар для покупки
+                  </option>
+                  <optgroup label="Привилегии (навсегда)">
+                    <option value="31">
+                      УЛЬТРА статус — 1790 P.
+                    </option>
+                    <option value="12">
+                      АДМИНИСТРАТОР — 1500 P.
+                    </option>
+                    <option value="20">
+                      ПРЕМИУМ статус — 799 P.
+                    </option>
+                    <option value="18">
+                      VIP статус — 299 P.
+                    </option>
+                  </optgroup>
+                  <optgroup label="Лучший игровой бизнес">
+                    <option value="21">
+                      Адронный коллайдер — 1990 P.
+                    </option>
+                    <option value="11">
+                      Колонизация Марса — 500 P.
+                    </option>
+                  </optgroup>
+                  <optgroup label="Игровой денежный принтер">
+                    <option value="23">
+                      HP Color LaserJet — 399 P.
+                    </option>
+                  </optgroup>
+                  <optgroup label="Игровая валюта">
+                    <option value="22">
+                      30.000.000.000.000$ — 199 P.
+                    </option>
+                    <option value="34">
+                      15.000 GB — 15 P.
+                    </option>
+                    <option value="35">
+                      50.000 GB — 48 P.
+                    </option>
+                    <option value="36">
+                      100.000 GB — 95 P.
+                    </option>
+                    <option value="37">
+                      250.000 GB — 235 P.
+                    </option>
+                    <option value="38">
+                      500.000 GB — 460 P.
+                    </option>
+                    <option value="39">
+                      1.000.000 GB — 900 P.
+                    </option>
+                    <option value="40">
+                      2.500.000 GB — 2250 P.
+                    </option>
+                  </optgroup>
+                  <optgroup label="Товары из лавки">
+                    <!-- <option value="32">
+                      Безлимитные переводы — 10000 P.
+                  </option> -->
+                    <option value="41">
+                      Безлимитный банк. счет — 5000 P.
+                    </option>
+                    <option value="33">
+                      Максимальная энергия 200 — 1500 P.
+                    </option>
+                  </optgroup>
+                  <optgroup label="Разбан аккаунта">
+                    <option value="24">
+                      Снять временный бан — 500 P.
+                    </option>
+                  </optgroup>
+                </select>
+              </div>
+              <button id="buy__btn" class="buy__btn" type="submit"><img src="images/buy/cart.svg" alt="cart">
+                <span>Перейти к
+                  оплате</span>
+              </button>
+            </form>
+            <!-- / BUY__FORM -->
+            <div class="buy__paying wow animate__animated animate__fadeInUp" data-wow-delay=".9s">
+              <picture>
+                <source srcset="images/buy/buy-cards.webp" type="image/webp">
+                <img class="buy__paying-inner" src="images/buy/buy-cards.png" alt="Оплатить">
+              </picture>
+            </div>
+          </div>
+          <!-- / BUY__MAIN -->
+          <!-- BUY__INFO -->
+          <div class="buy__info wow animate__animated animate__fadeIn" data-wow-delay=".4s">
+            <div class="buy__vk-groups vk-groups" id="vk_groups"></div>
+            <!-- BUY__INFO-BTNS-LIST -->
+            <ul class="buy__info-btns-list">
+              <li class="buy__info-btn-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".5s"
+                data-open-popup="2">
+                <a class="buy__info-btn" href="#">Описание товаров</a>
+              </li>
+              <li class="buy__info-btn-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".7s"
+                data-open-popup="1">
+                <a class="buy__info-btn" href="#">Контакты</a>
+              </li>
+              <li class="buy__info-btn-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".9s">
+                <a class="buy__info-btn buy__info-btn--trasparent" href="#">Соглашение</a>
+              </li>
+              <li class="buy__info-btn-wrapper wow animate__animated animate__fadeIn" data-wow-delay="1.1s">
+                <a class="buy__info-btn buy__info-btn--trasparent" href="#">Конфиденциальность</a>
+              </li>
+            </ul>
+            <!-- / BUY__INFO-BTNS-LIST -->
+
+            <div class="buy__company-wrapper wow animate__animated animate__fadeIn" data-wow-delay=".6s">
+              <p class="buy__company-text">
+                ИП Чернышев Егор Алексеевич
+              </p>
+              <p class="buy__company-text">
+                ИНН 165036599758
+              </p>
+              <p class="buy__company-text">
+                ОГРН 321169000123641
+              </p>
+            </div>
+          </div>
+          <!-- / BUY__INFO -->
+        </div>
+        <!-- / BUY__INNER -->
+      </div>
+    </section>
+    <!-- / BUY -->
+  </main>
+  <!-- / MAIN -->
+
+  <!-- Подключение скриптов -->
+  <script src="js/wow.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
