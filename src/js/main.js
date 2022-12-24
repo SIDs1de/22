@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const validator = () => {
     const form = document.querySelector('.buy__form');
-    const formBtn = document.querySelector('.buy__btn');
+    const formBtn = document.querySelector('#buy__btn');
     const textInput = document.querySelector('.buy__text-input');
     const select = document.querySelector('.buy__select');
 
