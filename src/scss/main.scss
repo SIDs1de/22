@@ -71,6 +71,9 @@ body {
     height: 100vh;
     min-height: 400px;
   }
+  &--800 {
+    min-height: 800px;
+  }
 }
 
 .header {
@@ -567,6 +570,9 @@ body {
 }
 
 .buy {
+  &__inner--centered {
+    align-items: center;
+  }
   &__main {
     &--no-mr {
       margin: 0;
@@ -578,6 +584,7 @@ body {
     transform: translate(0);
     &__title {
       @include adaptive-value("font-size", 30, 20, 1);
+      margin-bottom: 25px;
     }
     &__text {
       @include adaptive-value("font-size", 19, 14, 1);
@@ -588,14 +595,13 @@ body {
     &__main {
       width: 100%;
       height: auto;
-      padding: 30px 30px 90px;
-      padding-bottom: 80px;
+      padding: 30px 30px 85px;
       margin: 0;
       max-width: 600px;
     }
     &__text:not(:first-child) {
       display: block;
-      margin-top: 10px;
+      margin-top: 15px;
     }
   }
   &--coop {
@@ -604,10 +610,17 @@ body {
         @include adaptive-value("gap", 50, 25, 1);
       }
       &__title {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
+      }
+      &__accent-text {
+        @include adaptive-value("margin-bottom", 25, 20, 1);
       }
       &__btn {
-        @include adaptive-value("margin-top", 15, 15, 1);
+        @include adaptive-value("margin-top", 10, 10, 1);
+      }
+      &__input {
+        background: #fff;
+        filter: none;
       }
     }
   }

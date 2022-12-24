@@ -28,6 +28,11 @@
   }
 }
 @media (max-width: 1180px) {
+  .main {
+    &--no-centered {
+      flex: 0 1 auto;
+    }
+  }
   .page {
     &__header--static {
       @include adaptive-value("margin-bottom", 120, 30, 1);
