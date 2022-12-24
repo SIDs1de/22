@@ -154,30 +154,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const validator = () => {
     const form = document.querySelector('.buy__form');
     const formBtn = document.querySelector('#buy__btn');
-    const textInput = document.querySelector('.buy__text-input');
+    const textInputs = document.querySelectorAll('.buy__text-input');
+    const textInputSpans = document.querySelectorAll('.buy__input-span');
+
     const select = document.querySelector('.buy__select');
 
-    const textInputSpan = document.querySelector('.buy__input-span');
     const selectSpan = document.querySelector('.buy__select-span');
 
     const re = new RegExp('^[0-9]+$');
 
     formBtn.addEventListener('click', () => {
+      let flag = false;
       event.preventDefault();
 
-      if (!textInput.value) {
-        textInputSpan.innerHTML = 'Заполните поле!';
-      } else {
-        textInputSpan.innerHTML = '';
+      textInputs.forEach((textInput, i) => {
+        if (!textInput.value) {
+          textInputSpans[i].innerHTML = 'Заполните поле!'
+          flag = true;
+        } else {
+          textInputSpans[i].innerHTML = ''
+        }
+      })
+      if (select) {
+        if (select.value === 'Выберите товар для покупки') {
+          selectSpan.innerHTML = 'Вы не выбрали товар для покупки!';
+          flag = true;
+        } else {
+          selectSpan.innerHTML = '';
+        }
       }
-
-      if (select.value === 'Выберите товар для покупки') {
-        selectSpan.innerHTML = 'Вы не выбрали товар для покупки!';
-      } else {
-        selectSpan.innerHTML = '';
-      }
-
-      if (textInput.value && select.value !== 'Выберите товар для покупки') {
+      if (!flag) {
         form.submit();
       }
     });

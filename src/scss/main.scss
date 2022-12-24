@@ -566,6 +566,50 @@ body {
   }
 }
 
+.buy {
+  &__main {
+    &--no-mr {
+      margin: 0;
+      flex: 1 0 50%;
+    }
+  }
+  .panel {
+    position: static;
+    transform: translate(0);
+    &__title {
+      @include adaptive-value("font-size", 30, 20, 1);
+    }
+    &__text {
+      @include adaptive-value("font-size", 19, 14, 1);
+    }
+    &__bottom-text {
+      @include adaptive-value("font-size", 19, 16, 1);
+    }
+    &__main {
+      width: 100%;
+      height: auto;
+      padding: 30px 30px 90px;
+      padding-bottom: 80px;
+      margin: 0;
+      max-width: 600px;
+    }
+    &__text:not(:first-child) {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  &--coop {
+    .buy {
+      &__inner {
+        @include adaptive-value("gap", 50, 25, 1);
+      }
+      &__title {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
 *::-webkit-scrollbar {
   width: 12px; /* ширина scrollbar */
 }

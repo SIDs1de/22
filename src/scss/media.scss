@@ -61,6 +61,9 @@
       }
     }
   }
+  .buy__main--no-mr {
+    margin: 0;
+  }
   .mailing {
     &__accent-text {
       padding: 12px 18px;
@@ -178,14 +181,6 @@
 @media (max-height: 600px) {
   .popup {
     overflow-y: auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .buy {
-    &__info-btn-wrapper {
-      // width: 170px;
-    }
   }
 }
 
@@ -313,6 +308,10 @@
     &__paying-inner {
       width: 212px;
     }
+  }
+
+  .buy__main--no-mr {
+    margin: 0;
   }
 }
 
