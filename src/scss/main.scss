@@ -125,8 +125,6 @@ body {
     color: #fff;
     border-radius: 60px;
     padding: 12px 24px;
-    // text-align: center;
-    // max-width: 340px;
     @include adaptive-value("margin-bottom", 30, 25, 1);
     transition: background-color 0.2s;
     display: inline-block;
@@ -417,6 +415,45 @@ body {
       transform: translateY(10px);
       transition: transform 0.2s, opacity 0.2s;
     }
+  }
+}
+
+.mailing {
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__btn {
+    margin: 0;
+    max-width: 400px;
+    display: flex;
+    @include adaptive-value("padding-top", 18, 18, 1);
+    @include adaptive-value("padding-bottom", 18, 18, 1);
+    @include adaptive-value("font-size", 15, 15, 1);
+    line-height: calc(21 / 20);
+    img {
+      @include adaptive-value("width", 15, 14, 1);
+      @include adaptive-value("height", 15, 14, 1);
+      @include adaptive-value("margin-right", 12, 8, 1);
+    }
+  }
+  &__btn + &__btn {
+    @include adaptive-value("margin-top", 15, 12, 1);
+  }
+  &__img {
+    line-height: 0;
+    @include adaptive-value("width", 17, 14, 1);
+    @include adaptive-value("height", 17, 14, 1);
+    @include adaptive-value("margin-right", 12, 10, 1);
+  }
+  &__span {
+    line-height: 0;
+  }
+  &__accent-text {
+    padding: 12px 24px;
+    @include adaptive-value("margin-bottom", 20, 18, 1);
   }
 }
 

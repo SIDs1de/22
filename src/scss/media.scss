@@ -61,6 +61,11 @@
       }
     }
   }
+  .mailing {
+    &__accent-text {
+      padding: 12px 18px;
+    }
+  }
 }
 
 @media (min-width: 670px) {
@@ -264,7 +269,7 @@
       text-align-last: left;
       display: inline-block;
       font-size: 14px;
-      padding: 7px 14px;
+      padding: 10px 16px;
       margin-bottom: 20px;
     }
     &__input {
