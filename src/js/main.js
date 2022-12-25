@@ -214,6 +214,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 10500)
   };
 
+  const openCloseMenu = (burgerBtn, headerMenu, body) => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+    if (burgerBtn.classList.contains('_open')) {
+      burgerBtn.classList.replace('_open', '_close')
+    } else if (burgerBtn.classList.contains('_close')) {
+      burgerBtn.classList.replace('_close', '_open')
+    } else {
+      burgerBtn.classList.add('_open')
+    }
+
+    headerMenu.classList.toggle('_open')
+    body.classList.toggle('_fixed')
+  }
+
+  const burger = () => {
+    const burgerBtn = document.querySelector('.burger')
+    const headerMenu = document.querySelector('.header__menu')
+    const body = document.querySelector('html')
+
+    burgerBtn.addEventListener('click', () => {
+      openCloseMenu(burgerBtn, headerMenu, body)
+    })
+  }
+
+  burger();
   validator();
   wows();
   vkSwitchWidth();
