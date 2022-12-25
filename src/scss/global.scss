@@ -19,6 +19,9 @@
 }
 
 .burger {
+  &._no-touch {
+    pointer-events: none;
+  }
   position: relative;
   z-index: 101;
   @include adaptive-value("height", 20, 16, 1);

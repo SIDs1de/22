@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openPopupsBtns = document.querySelectorAll('[data-open-popup]');
     const popups = document.querySelectorAll('[data-popup]');
     const html = document.querySelector('html');
+    const burger = document.querySelector('.burger');
     if (popups) {
       openPopupsBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
@@ -92,16 +93,19 @@ document.addEventListener('DOMContentLoaded', () => {
               popup.classList.add('active');
               const closeBtn = popup.querySelector('.popup__inner-close');
               const back = popup.querySelector('.popup__bg');
+              burger.classList.add('_no-touch')
               html.classList.add('lock');
 
               closeBtn.addEventListener('click', () => {
                 popup.classList.remove('active');
                 html.classList.remove('lock');
+                burger.classList.remove('_no-touch')
               });
 
               back.addEventListener('click', () => {
                 popup.classList.remove('active');
                 html.classList.remove('lock');
+                burger.classList.remove('_no-touch')
               });
 
               const popupBody = popup.querySelector('.popup__body');
@@ -110,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (e.target === popupInner || e.target === popupBody) {
                   popup.classList.remove('active');
                   html.classList.remove('lock');
+                  burger.classList.remove('_no-touch')
                 }
               });
             }
