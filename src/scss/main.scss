@@ -131,6 +131,15 @@ html {
     display: flex;
   }
   &__item {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__item-icon {
+    margin-right: 5px;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
   }
   &__item-link {
     position: relative;
