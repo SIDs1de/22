@@ -690,6 +690,9 @@ html {
       &__accent-text {
         @include adaptive-value("margin-bottom", 25, 20, 1);
       }
+      &__form {
+        margin-bottom: 0;
+      }
       &__btn {
         @include adaptive-value("margin-top", 10, 10, 1);
       }
