@@ -253,4 +253,19 @@ document.addEventListener('DOMContentLoaded', () => {
   selectSwitch();
   popupsScript();
   vkRepair();
+
+  window.addEventListener('resize', () => {
+    const burgerBtn = document.querySelector('.burger')
+    const headerMenu = document.querySelector('.header__menu')
+    const body = document.querySelector('html')
+
+    if (window.innerWidth >= 1101) {
+      if (burgerBtn.classList.contains('_open')) {
+        burgerBtn.classList.replace('_open', '_close')
+      }
+
+      headerMenu.classList.remove('_open')
+      body.classList.remove('_fixed')
+    }
+  })
 });
