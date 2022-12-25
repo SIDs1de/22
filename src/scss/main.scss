@@ -63,6 +63,18 @@ html {
     section {
       transform: translateX(-100%);
     }
+    .header {
+      position: relative;
+      z-index: 101;
+      &__inner {
+        position: relative;
+        z-index: 101;
+      }
+      &__logo-wrapper {
+        position: relative;
+        z-index: 101;
+      }
+    }
     .main--centered {
       .panel {
         transform: translate(-150%, -33%);
@@ -97,12 +109,8 @@ html {
 }
 
 .header {
-  position: relative;
-  z-index: 101;
   &__inner {
     max-width: 1920px;
-    position: relative;
-    z-index: 101;
     margin: 0 auto;
     @include adaptive-value("padding-top", 26, 20, 1);
     @include adaptive-value("padding-left", 295, 10, 0);
@@ -142,8 +150,6 @@ html {
     }
   }
   &__logo-wrapper {
-    position: relative;
-    z-index: 101;
   }
   &__logo-img {
     transition: filter 0.3s;
