@@ -86,20 +86,25 @@
 
 @media (max-width: 1000px) {
   .header {
+    &__logo-img {
+      // background-color: rgba(#fff, .9);
+      // border-radius: 50px;
+      // padding-left: 20px;
+      // padding-right: 20px;
+    }
     &__menu {
       position: fixed;
       top: 0;
       right: 0;
       width: 100%;
       height: 100vh;
-      background-color: rgba(#000, 0.8);
+      background-color: rgba(#ccc, 0.8);
       z-index: 100;
       transition: transform 0.4s;
       transform: translateX(100%);
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      color: #fff;
       gap: 30px;
       &._open {
         transform: translateX(0);
@@ -113,9 +118,11 @@
         height: 100px;
         background: url("../images/want/main.jpg") center/cover no-repeat;
       }
-    }
-    &__item {
+    }   
+    &__item-link {
       font-size: 24px;
+      opacity: 1;
+      color: #0c1f36;
     }
   }
 }
