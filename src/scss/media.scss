@@ -93,8 +93,10 @@
       // padding-right: 20px;
     }
     &__item-icon {
+      display: block;
       width: 35px;
       height: 35px;
+      margin-right: 7px;
     }
     &__menu {
       position: fixed;

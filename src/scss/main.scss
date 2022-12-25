@@ -135,9 +135,9 @@ html {
     align-items: flex-end;
   }
   &__item-icon {
+    display: none;
     margin-right: 5px;
     line-height: 0;
-    display: block;
     width: 20px;
     height: 20px;
   }
